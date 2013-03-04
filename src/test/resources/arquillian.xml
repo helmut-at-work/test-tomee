@@ -32,13 +32,21 @@
 	</container>
 	-->
 	<!-- if you decided to use tomee adapter in the pom
+			<poperty name="classifier">plus</poperty>
+
 	-->
-	<container qualifier="tomee" default="true">
+	<container qualifier="tomee-do-not-work" default="true">
+		<configuration>
+			<property name="httpPort">8080</property>
+			<property name="appWorkingDir">target/arquillian-test-working-dir</property>
+		</configuration>
+	</container>
+	<container qualifier="tomee-worked" default="false">
 		<configuration>
 			<property name="httpPort">-1</property>
 			<property name="stopPort">-1</property>
 			<property name="ajpPort">-1</property>
-			<property name="version">${tomee.version}</property>
+			<property name="version">1.5.1</property>
 			<property name="dir">target/apache-tomee-remote</property>
 			<property name="appWorkingDir">target/arquillian-test-working-dir</property>
 			<property name="properties" />
