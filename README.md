@@ -1,4 +1,5 @@
 test-tomee
+Example for arquillian remote container don't work with CDI in tests.
 ==========
 This is my example project to try using a tomee arquillian remote configuration
 as described in:
@@ -34,3 +35,9 @@ java.lang.AssertionError
 	at org.junit.Assert.assertNotNull(Assert.java:631)
 	at de.helmut.test.tomee.MiniBeanTest.testSayHello(MiniBeanTest.java:36)
 ...
+
+
+===========================================================
+Solution
+===========================================================
+This seems to be a bug fixed in the 1.6.0-SNAPSHOT of TomEE
