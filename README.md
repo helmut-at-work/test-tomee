@@ -10,7 +10,7 @@ groupId: org.apache.openejb.maven
 artifactId: tomee-webapp-archetype
 
 If I configure in the arquillian.xml
-			<property name="httpPort">-1</property>
+			<property name="httpPort">-1</property> ...
 it worked. If I configure arquillian.xml like discribed in the article
 			<property name="httpPort">8080</property>
 I can't get the CDI injection to work
